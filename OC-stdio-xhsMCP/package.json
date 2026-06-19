@@ -1,0 +1,21 @@
+{
+  "name": "oc-stdio-xhs-mcp",
+  "version": "1.2.0",
+  "description": "stdio<->HTTP bridge connecting OpenClaw (stdio MCP) to xiaohongshu-mcp (HTTP+SSE MCP), with timeouts, session self-heal and publish idempotency.",
+  "bin": {
+    "oc-stdio-xhs-mcp": "xhs-stdio-bridge.js"
+  },
+  "main": "xhs-stdio-bridge.js",
+  "scripts": {
+    "check": "node --check xhs-stdio-bridge.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["mcp", "openclaw", "xiaohongshu", "xhs", "stdio", "bridge", "sse"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adambbhe/OC-stdio-xhsMCP.git"
+  },
+  "license": "MIT"
+}

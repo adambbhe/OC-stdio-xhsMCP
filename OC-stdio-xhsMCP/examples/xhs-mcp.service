@@ -1,0 +1,18 @@
+[Unit]
+Description=xiaohongshu-mcp HTTP service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=it
+WorkingDirectory=/home/it/xiaohongshu-mcp
+ExecStart=/home/it/xiaohongshu-mcp/xiaohongshu-mcp-linux-amd64 -port 127.0.0.1:18060
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+# 不要配置 StandardOutput/StandardError 到文件：非 root 用户无写权限会触发 209/STDOUT。
+# 留空即默认写入 journald，用 journalctl -u xhs-mcp 查看。
+
+[Install]
+WantedBy=multi-user.target
